@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int size, elements[50], a, b, c;
+	cout << "Bubble sorting..." << endl;
+	cout << "Enter the array size: "; cin >> size;
+	cout << "Enter the " << size << " elements: \n\n"; 
+	for (a = 0; a < size; a++)
+	{
+		cin >> elements[a];
+	}
+	cout << "\n\nYour data: ";
+	for (a = 0; a < size; a++)
+	{
+		cout << elements[a] << " ";
+	}
+	//bubble sort
+	for (a = 0; a < size; a++)
+	{
+		for (b = 0; b < size - a - 1; b++)
+		{
+			if (elements[b] > elements[b+1])
+			{
+				c = elements[b];
+				elements[b] = elements[b+1];
+				elements[b+1] = c;
+			}
+		}
+	}
+	cout << "\n\nAfter using bubble sort...";
+	cout << "\n\nSorted Data: ";
+	for (a = 0; a < size; a++)
+	{
+		cout << elements[a] << " ";
+	}
+	return 0;
+}	
