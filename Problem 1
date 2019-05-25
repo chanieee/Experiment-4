@@ -1,0 +1,58 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+	char again, choice;
+	bool loop = true;
+	int n1, n2;
+	
+	
+	while (loop == true)
+	{
+	
+	cout << "MENU: "<< endl;
+	cout << setw(10) << "1. Add" << endl;
+	cout << setw(15) << "2. Subtract" << endl;
+	cout << setw(15) << "3. Multiply" << endl;
+	cout << setw(13) << "4. Divide" << endl;
+	cout << setw(14) << "5. Modulus" << endl;
+	
+	
+	cout << "\n\nChoose a number: "; cin >> choice;
+	cout << "Enter two numbers: \n";
+	cout << "1. " ; cin >> n1;
+	cout << "2. " ; cin >> n2;
+	
+	switch (choice)
+	{
+		case '1':
+				cout << "Answer: " << n1 + n2;
+				break;
+		case '2':
+				cout << "Answer: " << n1 - n2;
+				break;
+		case '3':
+				cout << "Answer: " << n1 * n2;
+				break;
+		case '4':
+				cout << "Answer: " << n1 / n2;n1 * n2;
+				break;
+		case '5':
+				cout << "Answer: " << n1 % n2;
+				break;
+	}
+
+	cout << "\n\nWant to continue?"; cin >> again;
+	if (again == 'y') 
+	{
+		loop = true;
+	}
+	else if (again == 'n')
+	{
+		loop = false;
+	}
+}
+	return 0;
+}
